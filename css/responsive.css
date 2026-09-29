@@ -199,7 +199,8 @@
   .hdr .brand-logo--header{width:clamp(90px,23.5vw,121px);}
   .hdr-login{width:auto;height:34px;min-height:0;padding:0 13px;font-size:11px;}
   .hdr-login svg{width:14px!important;height:14px!important;}
-  .hero-body{height:100%;padding:0 16px 32px;width:100%;display:flex;align-items:center;}
+  /* FIX заголовок вплотную к хедеру: контент центрирован, поэтому 40px паддинга = +20px сдвиг вниз */
+  .hero-body{height:100%;padding:40px 16px 32px;width:100%;display:flex;align-items:center;}
   .hero-body-inner{width:100%;text-align:center;}
   .hero-h1{font-size:clamp(48px,13vw,64px);line-height:.88;letter-spacing:-.06em;text-align:center;}
   .hero-sub{width:100%;margin-top:18px;font-size:14px;line-height:1.35;text-align:center;}
@@ -363,7 +364,7 @@
   /* Tall mobile sections may never reach the desktop observer's 15% threshold. */
   [data-reveal]>:first-child{opacity:1!important;transform:none!important;}
   .hdr-login{padding:0 10px;}
-  .hero-body{padding:0 16px 32px;}
+  .hero-body{padding:40px 16px 32px;}
   .hero-h1{font-size:68px;line-height:.8;}
   .hero-sub{font-size:14.5px;}
 
