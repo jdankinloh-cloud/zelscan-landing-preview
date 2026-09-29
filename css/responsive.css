@@ -158,10 +158,11 @@
      и слой пересоздаётся — glow «блинкует». Заменяем на предразмытый
      radial-gradient: визуал тот же, GPU-фильтра нет. ── */
   .b5-cards::before{
-    width:170%;max-width:780px;height:96%;
-    left:50%;top:52%;
+    width:170%;max-width:780px;
+    top:0;height:100%;
+    left:50%;
     transform:translateX(-50%);
-    background:radial-gradient(ellipse 50% 50% at 50% 50%, rgba(52,211,153,0.78) 0%, rgba(52,211,153,0.46) 38%, rgba(52,211,153,0.18) 60%, rgba(52,211,153,0) 78%);
+    background:radial-gradient(ellipse 50% 50% at 50% 48%, rgba(52,211,153,0.78) 0%, rgba(52,211,153,0.46) 38%, rgba(52,211,153,0.18) 60%, rgba(52,211,153,0) 80%);
     filter:none;
   }
   .b4-glow{
