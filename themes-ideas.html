@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Zelscan — темы для блока v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#020202;color:#fff;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;padding:40px 20px 80px}
+.wrap{max-width:1060px;margin:0 auto}
+h1{font-size:34px;font-weight:700;letter-spacing:-0.03em;line-height:1.1}
+.sub{color:rgba(255,255,255,.5);font-size:14px;margin-top:12px;line-height:1.5}
+.sub b{color:rgba(255,255,255,.8);font-weight:600}
+.grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:26px}
+.card{background:rgba(255,255,255,.03);border-radius:20px;padding:22px;position:relative}
+.card .num{position:absolute;top:18px;right:20px;font-size:12px;font-weight:600;color:rgba(255,255,255,.18)}
+.card h2{font-size:18px;font-weight:600;letter-spacing:-0.02em;line-height:1.25;padding-right:30px}
+.card .about{font-size:13px;line-height:1.5;color:rgba(255,255,255,.5);margin-top:8px;max-width:720px}
+.vars{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.var{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.025);border-radius:14px;padding:12px 14px}
+.var .tag{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;border-radius:8px;padding:4px 9px;font-size:10.5px;font-weight:600;white-space:nowrap;margin-top:1px;background:rgba(48,201,145,.12);color:#7fe0bd}
+.var .tag.near{background:rgba(255,255,255,.06);color:#b8b9be}
+.var .body{font-size:13px;line-height:1.45;color:rgba(255,255,255,.78)}
+.var .body em{color:rgba(255,255,255,.45);font-style:normal}
+.var .body b{color:#fff;font-weight:600}
+.rec{margin-top:28px;background:rgba(48,201,145,.06);border-radius:20px;padding:20px 22px}
+.rec .t{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#30C991}
+.rec .order{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.rec .order span{background:rgba(48,201,145,.12);color:#7fe0bd;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Темы для блока — v2</h1>
+  <p class="sub">Убрал кредиты (у нас рубли), динамику (мелочь для целого столбца) и конвейер (уже показан). Каждая тема ниже — <b>самостоятельная фича продукта</b>, которой нет на странице. Экраны — реальные страницы 1:1 или с минимальной правкой.</p>
+
+  <div class="grid">
+
+    <div class="card"><span class="num">01</span>
+      <h2>Индекс доверия — одна цифра перед сделкой</h2>
+      <p class="about">Отчёт сводит репутацию, конфликты и поведение в один индекс 0–100. Открыл — понял, можно ли иметь дело. На лендинге индекса нет вообще.</p>
+      <div class="vars">
+        <div class="var"><span class="tag">1:1 · анализ</span><div class="body">Полукруглый гейдж <b>«35/100 · умеренно»</b> со стрелкой — реальный экран страницы «Анализ».</div></div>
+        <div class="var"><span class="tag">1:1 · мои досье</span><div class="body">Карточка досье с плитой <b>«Репутация 35/100»</b> (жёлтая цифра) — как в списке «Мои досье».</div></div>
+        <div class="var"><span class="tag near">правка гейджа</span><div class="body">Гейдж крупно на весь кадр + снизу три составляющих: <b>репутация · конфликты · поведение</b> <em>(подписи из отчёта).</em></div></div>
+      </div>
+    </div>
+
+    <div class="card"><span class="num">02</span>
+      <h2>Досье — это 5 разделов, а не одна карточка</h2>
+      <p class="about">Обзор → Активность → Поведение → Психология → Анализ. Каждый раздел — свои экраны и выводы. На лендинге показан только кусок «Обзора».</p>
+      <div class="vars">
+        <div class="var"><span class="tag">1:1 · отчёт</span><div class="body">Панель вкладок <b>Обзор | Активность | Поведение | Психология | Анализ</b> с активной вкладкой — реальный переключатель из отчёта.</div></div>
+        <div class="var"><span class="tag">1:1 · психология</span><div class="body">Тайлы «Психологии»: <b>Уверенность 43%</b> (сфера-лицо), <b>Психологический возраст 31</b>, <b>Признание ошибок</b> (весы).</div></div>
+        <div class="var"><span class="tag">1:1 · анализ</span><div class="body">LED-полосы приёмов: <b>Провокация / Скрытность / Сарказм / Упёртость / Теплота / Открытость</b> — реальный блок страницы «Анализ».</div></div>
+      </div>
+    </div>
+
+    <div class="card"><span class="num">03</span>
+      <h2>Поведение: как человек на самом деле общается</h2>
+      <p class="about">Манера речи, типажи, триггеры и реальные фразы из постов. Про стиль общения — на странице такого раздела нет.</p>
+      <div class="vars">
+        <div class="var"><span class="tag">1:1 · поведение</span><div class="body">Чипы-типажи <b>«Токсик» «Шарит» «Тролль» «Душа»</b> + строка вердикта — как в карточке досье, но крупно.</div></div>
+        <div class="var"><span class="tag">1:1 · поведение</span><div class="body">«Примеры фраз»: цитаты реальных постов курсивом <b>«да бывает такое что не…»</b> — список из страницы «Поведение».</div></div>
+        <div class="var"><span class="tag">1:1 · поведение</span><div class="body">«🎯 Триггеры»: карточки того, что выводит профиля из себя — реальный блок страницы.</div></div>
+      </div>
+    </div>
+
+    <div class="card"><span class="num">04</span>
+      <h2>Что читает сервис — и откуда</h2>
+      <p class="about">Источник один — lolz.team. Профиль: ник, ID, дата регистрации. Контент: темы, посты, сообщения. Активность: частота, репутация, динамика. Результат — интерпретация поведения аккаунта, а не человека в жизни.</p>
+      <div class="vars">
+        <div class="var"><span class="tag">1:1 · отчёт</span><div class="body">Hero профиля: <b>ник, ID, стаж на форуме</b> + описание — всё это данные, которые сервис читает из API.</div></div>
+        <div class="var"><span class="tag">1:1 · активность</span><div class="body">Разделы <b>«Где обитает»</b> и <b>«Стена профиля»</b> — реальные страницы данных аккаунта.</div></div>
+        <div class="var"><span class="tag">1:1 · модерация</span><div class="body">Секция <b>«02 / Данные»</b> со страницы для модерации: список Источник / Профиль / Контент / Активность / Результат — готовый экран, текст уже написан.</div></div>
+      </div>
+    </div>
+
+    <div class="card"><span class="num">05</span>
+      <h2>Чего Zelscan не делает — никогда</h2>
+      <p class="about">Не использует сторонние OSINT-сервисы и базы утечек. Не ищет имя, дату рождения, адрес. Не ищет телефон, почту, соцсети. Не сопоставляет профиль с человеком. Деанон — не про нас.</p>
+      <div class="vars">
+        <div class="var"><span class="tag">1:1 · модерация</span><div class="body">Секция <b>«03 / Ограничения»</b> со страницы для модерации: 5 строк-ограничений — готовый экран, текст уже написан.</div></div>
+        <div class="var"><span class="tag">1:1 · дашборд</span><div class="body">Hero дашборда со строкой <b>«🛡 Работаем исключительно с публичной информацией»</b> — тезис уже есть в интерфейсе.</div></div>
+        <div class="var"><span class="tag near">правка модерации</span><div class="body">Список ограничений крупно на весь кадр + иконка замка сверху <em>— единственная добавка.</em></div></div>
+      </div>
+    </div>
+
+    <div class="card"><span class="num">06</span>
+      <h2>Отчёт живёт по ссылке — досье можно показать</h2>
+      <p class="about">Кнопка «Поделиться» в отчёте и публичные досье: разбор можно открыть продавцу, напарнику, в теме.</p>
+      <div class="vars">
+        <div class="var"><span class="tag">1:1 · отчёт</span><div class="body">Шапка отчёта с кнопкой <b>«🔗 Поделиться»</b> — она уже есть рядом с именем.</div></div>
+        <div class="var"><span class="tag">1:1 · публичные досье</span><div class="body">Страница <b>«Публичные досье»</b> — лента готовых разборов, витрина сервиса.</div></div>
+        <div class="var"><span class="tag near">правка отчёта</span><div class="body">Шапка отчёта + раскрытая ссылка <b>zelscan.xyz/d/ZS-CD626639</b> <em>(реальный номер досье).</em></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="rec">
+    <div class="t">Моя рекомендация</div>
+    <div class="order"><span>01 Индекс доверия</span><span>02 Пять разделов</span><span>05 Ограничения</span><span>04 Что читает сервис</span><span>03 Поведение и фразы</span><span>06 Шеринг</span></div>
+  </div>
+</div>
+</body>
+</html>

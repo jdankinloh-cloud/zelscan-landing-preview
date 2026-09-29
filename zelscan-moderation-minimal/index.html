@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Информация о назначении и границах работы Zelscan для модерации lolz.team.">
+  <title>Zelscan — Информация для модерации</title>
+  <link rel="icon" href="assets/images/zelscan.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">К содержанию</a>
+  <div class="hdr-floating" id="floatingHeader" aria-hidden="true"></div>
+
+  <main id="content">
+    <section class="hero-outer" id="top" aria-labelledby="pageTitle">
+      <div class="promo" id="promoBar">
+        <span class="promo-t"><i aria-hidden="true"></i>бесплатный анализ первым 100 пользователям</span>
+        <button class="promo-close" id="promoClose" type="button" aria-label="Закрыть уведомление">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M3 3l7 7M10 3l-7 7" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <div class="heroblock" id="hero">
+        <header class="hdr">
+          <div class="brand-logo-wrap">
+            <a href="https://zelscan.xyz/" aria-label="Zelscan — главная">
+              <img class="brand-logo brand-logo--header" src="assets/images/zelscan.svg" alt="Zelscan">
+            </a>
+          </div>
+          <button class="hdr-login" type="button" data-href="https://app.zelscan.xyz/app?oauth_start=1">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.076 12.819c1.373 1.116 2.959 1.751 4.65 1.751 2.516 0 4.799-1.41 6.493-3.706-.715-.969-1.535-1.78-2.434-2.394l-1.444.72a3.1 3.1 0 0 1 .491 1.675 3.104 3.104 0 0 1-3.106 3.101 3.107 3.107 0 0 1-2.91-2.016l-1.74.87Zm3.582-1.788c.034.225.14.434.303.598.203.202.478.316.765.315.598 0 1.082-.483 1.082-1.08 0-.292-.117-.558-.307-.753l-1.843.92Z" fill="black"/>
+              <path d="m5.467 10.84 10.522-5.058L13.677.972l-1.195 4.251-1.435-2.987-1.195 4.251L8.417 2l-1.196 5.752-1.435-2.987-1.195 4.251-1.435-2.987-1.927 6.849 2.63-1.264 1.608-.773Z" fill="black"/>
+            </svg>
+            Войти в аккаунт
+          </button>
+        </header>
+
+        <div class="hero-content">
+          <h1 id="pageTitle">Инфа для<br>модеров</h1>
+          <p class="hero-lead">Что анализирует Zelscan, какие данные использует и чего сервис не делает.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="document" id="facts">
+      <section class="document-intro section">
+        <p class="section-label">01 / Назначение</p>
+        <div>
+          <h2>Что делает Zelscan</h2>
+          <p class="large-copy">Zelscan анализирует доступные данные профиля на <a href="https://lolz.team/" target="_blank" rel="noopener noreferrer">lolz.team</a>: публикации, активность и особенности общения. На их основе сервис формирует психологический портрет аккаунта.</p>
+          <p>Результат относится к поведению конкретного профиля внутри форума. Он не содержит сведений о том, кто владеет аккаунтом в реальной жизни.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-label">02 / Данные</p>
+        <div>
+          <h2>Какие данные используются</h2>
+          <dl class="fact-list">
+            <div><dt>Источник</dt><dd>lolz.team</dd></div>
+            <div><dt>Профиль</dt><dd>Ник, ID, дата регистрации и доступная статистика аккаунта</dd></div>
+            <div><dt>Контент</dt><dd>Темы, посты и сообщения пользователя</dd></div>
+            <div><dt>Активность</dt><dd>Частота публикаций, форумная репутация и динамика участия</dd></div>
+            <div><dt>Результат</dt><dd>Интерпретация поведения и стиля общения профиля</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section scope-section">
+        <p class="section-label">03 / Ограничения</p>
+        <div>
+          <h2>Чего сервис не делает</h2>
+          <ul class="plain-list">
+            <li>Не использует сторонние OSINT-сервисы и базы утечек.</li>
+            <li>Не ищет имя, фамилию, дату рождения, адрес или местоположение владельца.</li>
+            <li>Не ищет телефон, электронную почту, соцсети и аккаунты на других площадках.</li>
+            <li>Не сопоставляет профиль с реальным человеком.</li>
+            <li>Не предназначен для деанонимизации пользователей.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section report-section">
+        <p class="section-label">04 / Отчёт</p>
+        <div>
+          <h2>Как трактовать результат</h2>
+          <div class="report-notes">
+            <article><span>01</span><h3>Это не диагноз</h3><p>Психологический портрет — вероятностная интерпретация текстов и поведения аккаунта, а не медицинское заключение.</p></article>
+            <article><span>02</span><h3>Возможна ошибка</h3><p>На выводы влияют сарказм, ролевая манера общения, неполная история и контекст отдельных обсуждений.</p></article>
+            <article><span>03</span><h3>Нужна проверка</h3><p>Для решений модерации следует смотреть исходные публикации. Отчёт не является самостоятельным доказательством нарушения.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <p class="section-label">05 / Вопросы</p>
+        <div>
+          <h2>Короткие ответы</h2>
+          <div class="faq" data-accordion>
+            <details open>
+              <summary>Это OSINT-сервис?<i aria-hidden="true"></i></summary>
+              <p>Нет в смысле поиска личности по внешним источникам. Zelscan работает с данными профиля внутри lolz.team и не подключает сторонние OSINT-инструменты.</p>
+            </details>
+            <details>
+              <summary>Можно узнать, кто стоит за ником?<i aria-hidden="true"></i></summary>
+              <p>Нет. Сервис не устанавливает реальную личность владельца аккаунта.</p>
+            </details>
+            <details>
+              <summary>Откуда берутся данные?<i aria-hidden="true"></i></summary>
+              <p>Из доступного профиля пользователя на lolz.team: тем, постов, сообщений, активности и форумной статистики.</p>
+            </details>
+            <details>
+              <summary>Можно принимать решение только по отчёту?<i aria-hidden="true"></i></summary>
+              <p>Нет. Отчёт помогает быстрее оценить профиль, но решение следует проверять по исходным публикациям и правилам форума.</p>
+            </details>
+            <details>
+              <summary>Zelscan связан с lolz.team?<i aria-hidden="true"></i></summary>
+              <p>Zelscan — отдельный сервис. Эта страница описывает его назначение и не означает официального одобрения со стороны администрации форума.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="document-end">
+        <p>Если модерации нужна дополнительная информация о работе сервиса, можно связаться с автором проекта.</p>
+        <a href="https://t.me/lolz_nickname" target="_blank" rel="noopener noreferrer">Написать в Telegram <span aria-hidden="true">↗</span></a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="ft">
+    <div class="ft-bg"></div>
+    <div class="ft-inner">
+      <div class="ft-top">
+        <img class="brand-logo brand-logo--footer" src="assets/images/zelscan.svg" alt="Zelscan">
+        <div class="ft-author-row">
+          <span class="ft-launched">Проект запустил</span>
+          <button class="ft-badge" id="profileTrigger" type="button">
+            <span class="ft-badge-av"><img src="assets/images/avava.png" alt=""></span>
+            <span class="ft-badge-name">Дмитрий Удодов</span>
+          </button>
+        </div>
+      </div>
+      <div class="ft-sp"></div>
+      <div class="ft-links">
+        <a href="#facts">Для модерации</a>
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Пользовательское соглашение</a>
+        <a href="https://t.me/lolz_nickname" target="_blank" rel="noopener noreferrer">Поддержка</a>
+      </div>
+      <div class="ft-word-wrap"><span class="ft-word">ZELSCAN</span></div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileName" aria-hidden="true">
+    <div class="modal">
+      <button class="modal-close" type="button" aria-label="Закрыть">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8E8E93" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div class="modal-header">
+        <img class="modal-avatar" src="assets/images/avava.png" alt="">
+        <div class="modal-header-info"><div class="modal-name" id="profileName">Дмитрий Удодов</div><div class="modal-nick">@lolz_nickname</div></div>
+      </div>
+      <div class="modal-desc">Product Designer &amp; AI-Integrator. Создаю проекты на стыке дизайна, кода и нейросетей под ключ.</div>
+      <div class="modal-projects">
+        <div class="modal-projects-lbl">Портфолио</div>
+        <div class="modal-projects-scroll">
+          <div class="modal-pcard" style="background-image:url('assets/images/preview.png')"><span>Редизайн платформы<br>и внедрение AI</span></div>
+          <div class="modal-pcard modal-pcard--dark" style="background-image:url('assets/images/preview2.png')"><span>Дизайн и брендинг<br>криптообменника</span></div>
+          <div class="modal-pcard" style="background-image:url('assets/images/preview3.png')"><span>Лендинг<br>NFT мессенджера</span></div>
+          <div class="modal-pcard" style="background-image:url('assets/images/preview4.png')"><span>Креативы и баннеры<br>для бук. компаний</span></div>
+          <div class="modal-pcard" style="background-image:url('assets/images/preview5.png')"><span>Детейлинг чат-бот<br>с CRM системой</span></div>
+        </div>
+      </div>
+      <a class="modal-tg-btn" href="https://t.me/lolz_nickname" target="_blank" rel="noopener noreferrer"><img src="assets/images/telegram.svg" width="22" height="22" alt="">Написать в Telegram</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
