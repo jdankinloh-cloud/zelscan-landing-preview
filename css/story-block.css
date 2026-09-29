@@ -61,7 +61,11 @@
 @media(max-width:768px){
   .zw{margin-top:72px;padding:0 14px;}
   .zw-head{margin-bottom:36px;gap:18px;}
-  .zw-h2{font-size:clamp(38px,10.5vw,48px);}
+  .zw-h2{font-size:clamp(30px,7.6vw,44px);}
+  .zw-h2-ln{display:inline;}
+  .zw-h2-ln+.zw-h2-ln::before{content:' ';}
+  .zw-h2-ln.dim{color:#FFFFFF;}
+  .zw-cta{display:none;} /* на мобиле кнопка в блоке не нужна */
   .zw-shell{padding:16px;border-radius:24px;gap:14px;}
   .zw-right{min-height:340px;}
   .zw-btn{padding:14px 56px 14px 20px;}
