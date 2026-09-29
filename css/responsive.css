@@ -181,18 +181,17 @@
   /* First screen: promo + hero nearly fill the viewport, leaving 32px below. */
   .hero-outer{--hero-pad:8px;--hero-radius:28px;--hero-gap:8px;--promo-height:38px;height:calc(100svh - 32px);min-height:calc(100svh - 32px);padding:8px;gap:var(--hero-gap);}
   .promo{height:38px;padding:0 36px 0 12px;border-radius:20px;}
+  /* FIX сдвиг/расширение hero при скрытии промо: место не освобождаем — hero не растёт */
+  .promo--hidden{margin-bottom:0;}
   .heroblock{height:calc(100svh - 94px);min-height:0;max-height:none;flex:1 1 auto;}
   .hero-outer.promo-removed .heroblock{height:calc(100svh - 48px);}
+  /* FIX прыжок вниз при скролле: dvh растёт при схлопывании URL-бара и двигает
+     всё ниже hero — оставляем только svh (константа) */
   .hdr-floating{top:10px;width:calc(100% - 20px);min-height:52px;padding:6px 8px 6px 10px;border-radius:24px;gap:10px;}
   .hdr-floating-left{padding-left:4px;}
   .hdr-floating .brand-logo--header{width:83px;}
   .hdr-floating .hdr-login{box-shadow:none;}
   .hdr-floating .hdr-login svg{width:14px!important;height:14px!important;}
-  @supports (height:100dvh){
-    .hero-outer{height:calc(100dvh - 32px);min-height:calc(100dvh - 32px);}
-    .heroblock{height:calc(100dvh - 94px);}
-    .hero-outer.promo-removed .heroblock{height:calc(100dvh - 48px);}
-  }
   .promo-t{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .promo-close{right:4px;width:30px;height:30px;}
   .heroblock{border-radius:28px;}
