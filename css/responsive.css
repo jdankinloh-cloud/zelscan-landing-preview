@@ -165,11 +165,7 @@
     background:radial-gradient(ellipse 50% 50% at 50% 48%, rgba(52,211,153,0.78) 0%, rgba(52,211,153,0.46) 38%, rgba(52,211,153,0.18) 60%, rgba(52,211,153,0) 80%);
     filter:none;
   }
-  .b4-glow{
-    width:120%;max-width:683px;height:140px;bottom:-40px;
-    background:radial-gradient(ellipse 50% 50% at 50% 50%, rgba(66,204,142,0.5) 0%, rgba(66,204,142,0.2) 40%, rgba(66,204,142,0) 72%);
-    filter:none;
-  }
+  .b4-glow{display:none;} /* на мобилке glow отзывов не нужен (на десктопе остаётся из макета) */
   /* hero day-glow: тот же GPU-мигающий blur(179px) → градиент */
   .heroblock-day-glow{
     left:-30%;right:40%;top:-25%;bottom:45%;
