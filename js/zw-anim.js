@@ -170,8 +170,8 @@
   var btns = [].slice.call(linkArt.querySelectorAll('.lk-btn'));
   btns.forEach(function(b){
     b.addEventListener('click', function(){
-      btns.forEach(function(x){ x.classList.remove('on'); });
-      b.classList.add('on');
+      btns.forEach(function(x){ x.classList.remove('is-active'); });
+      b.classList.add('is-active');
     });
   });
 
@@ -181,11 +181,11 @@
   if (copy) copy.addEventListener('click', function(){
     var txt = 'https://app.zelscan.xyz/report?order=fe942cf832';
     function done(){
-      copy.classList.add('done');
+      copy.classList.add('copied');
       input.classList.add('copying');
       toast('Ссылка скопирована');
       setTimeout(function(){
-        copy.classList.remove('done');
+        copy.classList.remove('copied');
         input.classList.remove('copying');
       }, 1800);
     }
