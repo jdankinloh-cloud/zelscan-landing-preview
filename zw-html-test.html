@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZW HTML-art — тест (не для прода)</title>
+<!-- ТЕСТОВАЯ СТРАНИЦА: блок «Что умеет Zelscan» с HTML-иллюстрациями вместо PNG.
+     Никуда не деплоится, в index.html не подключён. Рефы: Figma Monopoly 1082-6921/7162/7382, 1084-7969. -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'SuisseIntl';src:url('fonts/SuisseIntl-Regular.otf') format('opentype');font-weight:400;font-style:normal;}
+@font-face{font-family:'SuisseIntl';src:url('fonts/SuisseIntl-Medium.otf') format('opentype');font-weight:500;font-style:normal;}
+@font-face{font-family:'SuisseIntl';src:url('fonts/SuisseIntl-SemiBold.otf') format('opentype');font-weight:600;font-style:normal;}
+@font-face{font-family:'SuisseIntl';src:url('fonts/SuisseIntl-Bold.otf') format('opentype');font-weight:700;font-style:normal;}
+</style>
+<link href="css/base.css?v=2" rel="stylesheet">
+<link href="css/story-block.css?v=7" rel="stylesheet">
+<link href="css/zw-art-2.css?v=5" rel="stylesheet">
+<style>
+  /* режимы сравнения: PNG / HTML / обе */
+  .zw-shot--png{z-index:1;}
+  .zw-mode-png .zw-shot--art{display:none;}
+  .zw-mode-html .zw-shot--png{display:none;}
+  .zw-mode-mix .zw-shot--png{opacity:.4;}
+  .zw-switch{position:fixed;right:18px;bottom:18px;z-index:99;display:flex;gap:6px;
+    background:rgba(20,20,22,.9);border-radius:12px;padding:6px;
+    font-family:Inter,sans-serif;}
+  .zw-switch button{border:0;cursor:pointer;padding:7px 12px;border-radius:8px;
+    background:transparent;color:rgba(255,255,255,.55);font-size:12px;font-weight:600;font-family:inherit;}
+  .zw-switch button.on{background:rgba(255,255,255,.12);color:#fff;}
+</style>
+</head>
+<body class="zw-mode-html">
+
+<!-- ═══ STORY BLOCK (копия из index.html) ═══ -->
+<section class="zw" style="margin-top:48px">
+  <div class="zw-head">
+    <h2 class="zw-h2"><span class="zw-h2-ln">Что умеет Zelscan</span></h2>
+    <p class="zw-sub">Собирает досье по публичной активности на Lolzteam — и объясняет каждый вывод.</p>
+  </div>
+
+  <div class="zw-gap" aria-hidden="true"></div>
+
+  <div class="zw-shell">
+    <div class="zw-left">
+      <div class="zw-list">
+        <article class="zw-item is-on">
+          <button class="zw-btn" type="button" aria-expanded="true">
+            <span class="zw-title">Что читает сервис</span>
+            <span class="zw-plus" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="zw-body"><p>Источник один — публичный lolz.team. Профиль: ник, ID, дата регистрации. Контент: темы, посты, сообщения. Активность: частота, репутация, динамика.</p></div>
+        </article>
+        <article class="zw-item">
+          <button class="zw-btn" type="button" aria-expanded="false">
+            <span class="zw-title">О досье</span>
+            <span class="zw-plus" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="zw-body"><p>Обзор, Активность, Поведение, Психология, Анализ. Каждый раздел — свой экран и выводы.</p></div>
+        </article>
+        <article class="zw-item">
+          <button class="zw-btn" type="button" aria-expanded="false">
+            <span class="zw-title">Индекс доверия</span>
+            <span class="zw-plus" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="zw-body"><p>Репутация, конфликты и поведение сходятся в одну цифру 0–100. Открыл — понял, можно ли иметь дело.</p></div>
+        </article>
+        <article class="zw-item">
+          <button class="zw-btn" type="button" aria-expanded="false">
+            <span class="zw-title">Отчёт живёт по ссылке</span>
+            <span class="zw-plus" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="zw-body"><p>Готовое досье открывается продавцу, напарнику или в теме — доступ настраивается, ссылка всегда свежая.</p></div>
+        </article>
+      </div>
+      <a class="zw-cta" href="https://app.zelscan.xyz/app?oauth_start=1">Проверить профиль</a>
+    </div>
+
+    <!-- правая колонка: bg.webp + PNG-версии (для сравнения) + HTML-иллюстрации -->
+    <div class="zw-right" aria-hidden="true">
+      <img class="zw-shot-bg" src="images/bg.webp" alt="">
+
+      <figure class="zw-shot zw-shot--png is-on" data-i="0"><img class="zw-shot-img" src="images/shema.webp" alt=""></figure>
+      <figure class="zw-shot zw-shot--png" data-i="1"><img class="zw-shot-img" src="images/about.webp" alt=""></figure>
+      <figure class="zw-shot zw-shot--png" data-i="2"><img class="zw-shot-img" src="images/index-doveria.webp" alt=""></figure>
+      <figure class="zw-shot zw-shot--png" data-i="3"><img class="zw-shot-img" src="images/link.webp" alt=""></figure>
+
+      <!-- ─── АРТ 1: схема «что читает сервис» (Figma 642×467) ─── -->
+      <figure class="zw-shot zw-shot--art is-on" data-i="0">
+        <div class="zwart zwart--shema">
+          <!-- верхняя карточка: публичный профиль -->
+          <div class="zs-rowcard zs-prof">
+            <div class="zw-ico"><img src="svg/zelenka.svg" alt=""></div>
+            <div class="zc-txt">
+              <div class="zc-t su">Публичный профиль на lolz.team</div>
+              <div class="zc-s">Информация из открытых страниц форума</div>
+            </div>
+            <span class="zw-pill">Источник</span>
+          </div>
+          <!-- три мини-карточки -->
+          <div class="zs-rowcard zs-mini zs-c1">
+            <div class="zw-ico"><img src="svg/profile.svg" alt=""></div>
+            <div class="zc-txt">
+              <div class="zc-t su">Профиль</div>
+              <div class="zc-s">Ник, ID, дата регистрации</div>
+            </div>
+          </div>
+          <div class="zs-rowcard zs-mini zs-c2">
+            <div class="zw-ico"><img src="svg/Chat_alt_2_fill.svg" alt=""></div>
+            <div class="zc-txt">
+              <div class="zc-t su">Контент</div>
+              <div class="zc-s">Темы, посты, сообщения</div>
+            </div>
+          </div>
+          <div class="zs-rowcard zs-mini zs-c3">
+            <div class="zw-ico"><img src="svg/activnost.svg" alt=""></div>
+            <div class="zc-txt">
+              <div class="zc-t su">Активность</div>
+              <div class="zc-s">Частота, репутация, динамика</div>
+            </div>
+          </div>
+          <!-- широкие карточки -->
+          <div class="zs-rowcard zs-wide zs-metrics">
+            <div class="zw-ico"><img src="svg/metrics.svg" alt=""></div>
+            <div class="zc-txt">
+              <div class="zc-t su">Сотни метрик</div>
+              <div class="zc-s">Конфликтность, токсичность, пики, круг общения</div>
+            </div>
+            <span class="zw-pill">Анализ</span>
+          </div>
+          <div class="zs-rowcard zs-wide zs-ai">
+            <div class="zw-ico"><img src="svg/AI-smile.svg" alt=""></div>
+            <div class="zc-txt">
+              <div class="zc-t su">ИИ-портрет</div>
+              <div class="zc-s">Осторожные формулировки, без диагнозов</div>
+            </div>
+            <span class="zw-pill">AI</span>
+          </div>
+          <div class="zs-rowcard zs-wide zs-dosie">
+            <div class="zw-ico"><img src="svg/ready-dosie.svg" alt=""></div>
+            <div class="zc-txt">
+              <div class="zc-t su">Готовое досье</div>
+              <div class="zc-s">Каждый вывод — со ссылкой на сообщение</div>
+            </div>
+            <span class="zw-pill green">Результат</span>
+          </div>
+          <!-- пунктирные коннекторы -->
+          <div class="zs-dash zs-dash-stem"></div>
+          <div class="zs-dash zs-dash-fork"></div>
+          <div class="zs-dash zs-dash-v zs-dash-v1"></div>
+          <div class="zs-dash zs-dash-v zs-dash-v2"></div>
+          <div class="zs-dash zs-dash-v zs-dash-v3"></div>
+        </div>
+      </figure>
+
+      <!-- ─── АРТ 2: о досье / психология (Figma 556×541) ─── -->
+      <figure class="zw-shot zw-shot--art" data-i="1">
+        <div class="zwart zwart--about">
+          <div class="ab-nav">
+            <div class="ab-lnk">Обзор</div><div class="ab-sep"></div>
+            <div class="ab-lnk">Активность</div><div class="ab-sep"></div>
+            <div class="ab-lnk">Поведение</div>
+            <div class="ab-lnk on su">Психология</div>
+            <div class="ab-lnk">Анализ</div>
+          </div>
+
+          <!-- пустые карточки-скелетоны -->
+          <div class="ab-card ab-empty ab-empty1">
+            <div class="sk-bar sk-a"></div><div class="sk-bar sk-b"></div><div class="sk-bar sk-c"></div>
+          </div>
+          <div class="ab-card ab-empty ab-empty2">
+            <div class="sk-bar sk-a"></div><div class="sk-bar sk-b"></div><div class="sk-bar sk-c"></div>
+          </div>
+
+          <!-- признание ошибок (весы) -->
+          <div class="ab-card ab-mist">
+            <div class="ab-glow ab-glow-amber"></div>
+            <div class="ab-glow ab-glow-green"></div>
+            <div class="ab-h">
+              <div class="ab-t su">Признание ошибок</div>
+              <div class="ab-s">Готовность признать неправоту</div>
+            </div>
+            <div class="ab-scales">
+              <div class="ab-ic">
+                <div class="sc-base"></div>
+                <div class="sc-pole"></div>
+                <div class="sc-pivot"></div>
+                <div class="sc-beam"></div>
+                <div class="sc-str sc-str-l"></div>
+                <div class="sc-str sc-str-r"></div>
+                <div class="sc-pan sc-pan-l">2</div>
+                <div class="sc-pan sc-pan-r">3</div>
+              </div>
+              <div class="sc-leg">
+                <span><i style="background:#34D399"></i>признал</span>
+                <span><i style="background:#F59E0B"></i>настоял на своём</span>
+              </div>
+              <div class="sc-cap">из 5 сообщений, где тема ошибки или спора поднимал</div>
+            </div>
+          </div>
+
+          <!-- эго -->
+          <div class="ab-card ab-ego">
+            <div class="ab-glow ab-glow-cyan"></div>
+            <div class="ab-glow ab-glow-blue"></div>
+            <div class="ab-h" style="width:139.16px">
+              <div class="ab-t su">Эго</div>
+              <div class="ab-s">Как часто говорит о себе</div>
+            </div>
+            <div class="ab-ego-r">
+              <div class="ab-ring" id="zwRing">
+                <div class="ab-ring-c">
+                  <div class="ab-ring-v" data-count="6" data-suffix="%">6%</div>
+                  <div class="ab-ring-l">эго-индекс</div>
+                </div>
+              </div>
+              <div class="ab-ego-col">
+                <b class="ab-ego-n" data-count="83">83</b>
+                <span class="ab-ego-u">«я»-маркеров</span>
+                <span class="ab-ego-verdict">Сдержанное эго</span>
+              </div>
+            </div>
+            <div class="ab-ego-note">Почти без «я» — пишет о вещах, а не о себе</div>
+          </div>
+        </div>
+      </figure>
+
+      <!-- ─── АРТ 3: индекс доверия (Figma 578.82×408) ─── -->
+      <figure class="zw-shot zw-shot--art" data-i="2">
+        <div class="zwart zwart--index">
+          <!-- карточка Udodov — позиции 1:1 из Figma/udodov-card.svg -->
+          <div class="ix-card">
+            <div class="ix-cardglow"></div>
+            <div class="ix-av-ring"></div>
+            <div class="ix-av"></div>
+            <div class="ix-nick"><span>Udodov</span><img class="ix-nick-ic" src="images/zelenka.svg?v=1" alt=""></div>
+            <div class="ix-tag1">Шарит</div>
+            <div class="ix-tag2">Душа</div>
+            <div class="ix-plan"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z" fill="#E7E9EA"/></svg><span>Полный AI</span></div>
+            <div class="ix-rep"><svg viewBox="0 0 24 24" fill="none"><path d="M14.8 3.6l5.6 5.6-2.2 2.2-5.6-5.6 2.2-2.2z" fill="#12CE90"/><path d="M12.6 8.4l3 3-8.2 8.2c-.8.8-2.2.8-3 0-.8-.8-.8-2.2 0-3l8.2-8.2z" fill="#12CE90"/></svg><b><span data-count="25">25</span>/100</b></div>
+            <div class="ix-more"><svg viewBox="0 0 8 8" fill="none"><path d="M1.5 1l3 3-3 3" stroke="#737378" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+            <div class="ix-body">
+              <div class="ix-stats">
+                <div class="st"><b data-count="298" data-space="1">298</b><span>Темы</span></div>
+                <div class="vsep"></div>
+                <div class="st"><b data-count="50007" data-space="1">50 007</b><span>Сообщений</span></div>
+                <div class="vsep"></div>
+                <div class="st"><b data-count="78">78</b><span>Стена</span></div>
+              </div>
+              <div class="ix-metrics">
+                <div class="mx g"><b data-count="56" data-suffix="%">56%</b><div class="bar"><i data-w="57"></i></div><span>Уверенность</span></div>
+                <div class="vsep"></div>
+                <div class="mx a"><b data-count="2" data-suffix="%">2%</b><div class="bar"><i data-w="7"></i></div><span>Эго</span></div>
+                <div class="vsep"></div>
+                <div class="mx r"><b data-count="39" data-suffix="%">39%</b><div class="bar"><i data-w="51"></i></div><span>Конфликт</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- карточка индекса -->
+          <div class="ix-gauge">
+            <div class="ix-t su">Индекс доверия</div>
+            <div class="ix-s">Насколько безопасно с ним взаимодействовать</div>
+            <svg class="ix-svg" viewBox="0 0 380.6 190.3" fill="none">
+              <defs>
+                <linearGradient id="ixGrad" x1="60.6" y1="165.4" x2="320" y2="165.4" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#34D399"/>
+                </linearGradient>
+              </defs>
+              <path d="M60.6 165.4 A129.7 129.7 0 0 1 320 165.4" stroke="rgba(0,0,0,0.35)" stroke-width="26.17" stroke-linecap="round"/>
+              <path class="ix-arc-glow" d="M60.6 165.4 A129.7 129.7 0 0 1 225.66 40.63" stroke="#34D399" stroke-width="26.17" stroke-linecap="round" opacity=".09" filter="blur(13px)"/>
+              <path class="ix-arc-prog" d="M60.6 165.4 A129.7 129.7 0 0 1 225.66 40.63" stroke="url(#ixGrad)" stroke-width="26.17" stroke-linecap="round"/>
+            </svg>
+            <div class="ix-val">
+              <i class="ix-needle"></i>
+              <div class="ix-num"><span class="n" data-count="58">58</span><small>/100</small></div>
+              <div class="ix-word">умеренно</div>
+            </div>
+            <div class="ix-scale">
+              <div class="ix-flag">
+                <div class="ix-flag-b"><b>58</b><span>/100</span></div>
+                <div class="ix-flag-tail"></div>
+              </div>
+              <div class="ix-bar"></div>
+              <div class="ix-tick" style="left:-0.38px"></div>
+              <div class="ix-tick" style="left:103.45px"></div>
+              <div class="ix-tick" style="left:241.87px"></div>
+              <div class="ix-tick" style="left:345.71px"></div>
+              <div class="ix-mark" style="left:115.24px"></div>
+              <div class="ix-mark" style="left:230.49px"></div>
+              <div class="ix-knob"></div>
+              <div class="ix-ends"><span>0</span><span>100</span></div>
+              <div class="ix-leg">
+                <div><i></i><span>Безопасно</span></div>
+                <div class="on"><i></i><span>Осторожно</span></div>
+                <div><i></i><span>Опасно</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </figure>
+
+      <!-- ─── АРТ 4: поделиться ссылкой (Figma 418×394) ─── -->
+      <figure class="zw-shot zw-shot--art" data-i="3">
+        <div class="zwart zwart--link">
+          <div class="lk-url">
+            <svg viewBox="0 0 9 11" fill="none"><rect x="0.5" y="4.5" width="8" height="6" rx="1.4" fill="#FFF"/><path d="M2 5V3.4A2.5 2.5 0 0 1 7 3.4V5" stroke="#FFF" stroke-width="1.4"/></svg>
+            <span>app.zelscan.xyz</span>
+          </div>
+          <div class="lk-modal">
+            <div class="lk-head">
+              <h4>Поделиться и доступ</h4>
+              <div class="lk-close"><svg viewBox="0 0 14 14" fill="none"><path d="M2.4 2.4l9.2 9.2M11.6 2.4l-9.2 9.2" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            </div>
+            <div class="lk-acc-label">Доступ к досье <span class="lk-q">?</span></div>
+            <div class="lk-links">
+              <div class="lk-btn b1">
+                <svg viewBox="0 0 15 15" fill="none"><rect x="2.4" y="6.3" width="10.2" height="7" rx="1.6" fill="currentColor"/><path d="M4.6 6V4.4a2.9 2.9 0 0 1 5.8 0V6" stroke="currentColor" stroke-width="1.5"/></svg>
+                Только я
+              </div>
+              <div class="lk-btn b2">
+                <svg viewBox="0 0 15 15" fill="none"><path d="M6.2 8.8a3 3 0 0 0 4.3.2l1.8-1.8a3 3 0 1 0-4.3-4.3l-.9.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8.8 6.2a3 3 0 0 0-4.3-.2L2.7 7.8a3 3 0 1 0 4.3 4.3l.9-.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                По ссылке
+              </div>
+              <div class="lk-btn b3 on">
+                <svg viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="7.5" r="6.2" stroke="currentColor" stroke-width="1.3"/><path d="M1.5 7.5h12M7.5 1.4c-3.4 3.6-3.4 8.6 0 12.2 3.4-3.6 3.4-8.6 0-12.2z" stroke="currentColor" stroke-width="1.1"/></svg>
+                Для всех
+              </div>
+            </div>
+            <div class="lk-seclabel">Ссылка на досье</div>
+            <div class="lk-input">
+              <span class="lk-urltxt">https://app.zelscan.xyz/report?order=fe942cf832</span>
+              <div class="lk-copy"><svg class="cp" viewBox="0 0 15 15" fill="none"><rect x="4.6" y="4.6" width="8" height="8" rx="1.4" stroke="#A8A8AD" stroke-width="1.3"/><path d="M10.4 2.4H3.8a1.4 1.4 0 0 0-1.4 1.4v6.6" stroke="#A8A8AD" stroke-width="1.3" stroke-linecap="round"/></svg><svg class="ok" viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="7.5" r="6.5" fill="#34D399"/><path d="M4.6 7.6l2 2 3.8-4" stroke="#052B1D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+            <div class="lk-save"><span class="lk-save-t">Сохранить</span></div>
+          </div>
+          <div class="lk-toast" id="lkToast">Ссылка скопирована</div>
+        </div>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- переключатель PNG / HTML / обе -->
+<div class="zw-switch" id="zwSwitch">
+  <button data-mode="zw-mode-png">PNG</button>
+  <button data-mode="zw-mode-html" class="on">HTML</button>
+  <button data-mode="zw-mode-mix">Обе</button>
+</div>
+
+<script>
+/* аккордеон — как js/story-block.js */
+(function(){
+  'use strict';
+  var section=document.querySelector('.zw');
+  if(!section)return;
+  var items=[].slice.call(section.querySelectorAll('.zw-item'));
+  var shots=[].slice.call(section.querySelectorAll('.zw-shot'));
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cur=0,timer=null,DELAY=4200;
+  function set(i){
+    cur=i;
+    items.forEach(function(it,k){
+      it.classList.toggle('is-on',k===i);
+      var b=it.querySelector('.zw-btn');
+      if(b)b.setAttribute('aria-expanded',k===i?'true':'false');
+    });
+    shots.forEach(function(s){s.classList.toggle('is-on',+s.dataset.i===i);});
+  }
+  function play(){if(reduced)return;stop();timer=setInterval(function(){set((cur+1)%items.length);},DELAY);}
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  items.forEach(function(it,k){
+    var btn=it.querySelector('.zw-btn');
+    if(btn)btn.addEventListener('click',function(){set(k);play();});
+  });
+  var shell=section.querySelector('.zw-shell');
+  if(shell){
+    shell.addEventListener('mouseenter',stop);
+    shell.addEventListener('mouseleave',play);
+    shell.addEventListener('focusin',stop);
+    shell.addEventListener('focusout',play);
+  }
+  set(0);play();
+})();
+
+/* ?frame=N&static=1 — выбрать кадр и заморозить анимации (для скриншотов) */
+(function(){
+  var q=new URLSearchParams(location.search);
+  if(q.get('static')){
+    var shell=document.querySelector('.zw-shell');
+    if(shell){shell.dispatchEvent(new Event('mouseenter'));}
+  }
+  if(q.get('still')||q.get('noblur')){
+    var st=document.createElement('style');
+    st.textContent='*{transition:none!important;animation:none!important}'+
+      (q.get('noblur')?'.ix-card{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}':'');
+    document.head.appendChild(st);
+  }
+  var f=parseInt(q.get('frame'),10);
+  if(f>=1&&f<=4){
+    var sec=document.querySelector('.zw');
+    var its=sec.querySelectorAll('.zw-item');
+    var shs=sec.querySelectorAll('.zw-shot');
+    its.forEach(function(it,k){
+      it.classList.toggle('is-on',k===f-1);
+      var b=it.querySelector('.zw-btn');
+      if(b)b.setAttribute('aria-expanded',k===f-1?'true':'false');
+    });
+    shs.forEach(function(s){s.classList.toggle('is-on',+s.dataset.i===f-1);});
+  }
+})();
+
+/* кольцо эго: 24 точки по кругу, верхняя — зелёная */
+(function(){
+  var ring=document.getElementById('zwRing');
+  if(!ring)return;
+  for(var i=0;i<24;i++){
+    var d=document.createElement('i');
+    d.style.setProperty('--a',(i*15)+'deg');
+    d.style.setProperty('--i',i);
+    if(i===0)d.className='on';
+    ring.appendChild(d);
+  }
+})();
+
+/* фит арт-сцены (743×640) под фактическую ширину кадра */
+(function(){
+  function fitArt(){
+    var r=document.querySelector('.zw-right');
+    if(!r)return;
+    r.style.setProperty('--zwfit',Math.min(1,r.clientWidth/743).toFixed(4));
+  }
+  window.addEventListener('resize',fitArt,{passive:true});
+  fitArt();
+})();
+
+/* переключатель режимов */
+(function(){
+  var sw=document.getElementById('zwSwitch');
+  if(!sw)return;
+  sw.addEventListener('click',function(e){
+    var b=e.target.closest('button');if(!b)return;
+    document.body.classList.remove('zw-mode-png','zw-mode-html','zw-mode-mix');
+    document.body.classList.add(b.dataset.mode);
+    [].forEach.call(sw.querySelectorAll('button'),function(x){x.classList.toggle('on',x===b);});
+  });
+})();
+</script>
+<script src="js/zw-anim.js?v=7"></script>
+</body>
+</html>
