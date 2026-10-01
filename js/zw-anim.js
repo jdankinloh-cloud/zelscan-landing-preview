@@ -13,6 +13,20 @@
   var arts = [].slice.call(document.querySelectorAll('.zw-shot--art'));
   if (!arts.length) return;
 
+  /* точки эго-кольца (24 шт, верхняя — зелёная) */
+  (function(){
+    var ring = document.querySelector('.ab-ring');
+    if (!ring || ring.dataset.ready) return;
+    ring.dataset.ready = '1';
+    for (var i = 0; i < 24; i++) {
+      var d = document.createElement('i');
+      d.style.setProperty('--a', (i * 15) + 'deg');
+      d.style.setProperty('--i', i);
+      if (i === 0) d.className = 'lit';
+      ring.appendChild(d);
+    }
+  })();
+
   /* фит арт-сцены (743×640) под фактическую ширину кадра */
   function fitArt(){
     var r = document.querySelector('.zw-right');
