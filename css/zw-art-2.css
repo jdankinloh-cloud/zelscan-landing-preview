@@ -256,11 +256,12 @@
 .lk-btn{position:absolute;top:3.41px;width:118.89px;height:34.13px;border-radius:10.24px;
   display:flex;align-items:center;justify-content:center;gap:6.83px;flex-wrap:nowrap;
   font-size:12.2px;line-height:12px;color:#6B6B6B;cursor:pointer;white-space:nowrap;
-  transition:background .2s ease,color .2s ease,box-shadow .2s ease;
+  transition:color .2s ease,box-shadow .2s ease,background-color .2s ease;
   backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
   box-shadow:0 0 0 0 rgba(0,0,0,.08),0 0 0 0 rgba(0,0,0,.03),0 0 0 0 rgba(0,0,0,.1),0 0 0 0 rgba(0,0,0,.17),0 0 0 0 rgba(0,0,0,.2);}
 .lk-btn svg{flex:none;}
-.lk-btn:not(.is-active):hover{background:rgba(255,255,255,.05);color:#A8A8AD;}
+/* неактивные: постоянный фон (глушит glow аватара за стеклом); hover — только цвет текста */
+.lk-btn:not(.is-active):hover{color:#A8A8AD;}
 .lk-btn svg{width:14.51px;height:14.51px;}
 .lk-btn.pos1{left:3.41px;} .lk-btn.pos2{left:125.71px;}
 .lk-btn.pos3{left:248.02px;}
